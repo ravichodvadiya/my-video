@@ -74,20 +74,19 @@ function navigateTo(page, cardId = null) {
   app.innerHTML = ""; // Clear existing content
 
   if (page === "home") {
+    clickDirectLink()
     renderHomePage();
   } else if (page === "details" && cardId) {
-    if(clcikCount == 0) {
-      clcikCount += 1; 
-      const link = document.createElement("a");
-      link.href = 'https://www.profitablecpmrate.com/emse0dfv?key=7e4d1477af047c755cf0a11179e7f7a7';
-      link.target = '_blank'
-      link.click();
-    }
-    if(clcikCount >= 1) {
-      clcikCount = 0;
+      clickDirectLink()
       renderDetailsPage(cardId);
-    }
   }
+}
+
+function clickDirectLink() {
+  const link = document.createElement("a");
+  link.href = 'https://www.profitablecpmrate.com/emse0dfv?key=7e4d1477af047c755cf0a11179e7f7a7';
+  link.target = '_blank'
+  link.click();
 }
 
 // Render Home page with dynamic cards
