@@ -17,15 +17,10 @@ fetch(jsonFilePath)
     return response.json();
   })
   .then(res => {
-    console.log(res); // Output JSON data in console
     data = res;
-    if(data.length > 0) {
-      // setTimeout(() => {
-        const btn = document.getElementById('home');
-        console.log("btn =======>",btn)
-        btn.click()
-      // }, 2000);
-
+    if (data.length > 0) {
+      const btn = document.getElementById('home');
+      btn.click()
     }
   })
   .catch(error => {
