@@ -2,6 +2,8 @@ let ShowAdsAtIndex = 3;
 let data = [];
 
 
+
+
 // Fetch the JSON file
 // Path to the JSON file
 const jsonFilePath = './data.json';
@@ -17,6 +19,14 @@ fetch(jsonFilePath)
   .then(res => {
     console.log(res); // Output JSON data in console
     data = res;
+    if(data.length > 0) {
+      // setTimeout(() => {
+        const btn = document.getElementById('home');
+        console.log("btn =======>",btn)
+        btn.click()
+      // }, 2000);
+
+    }
   })
   .catch(error => {
     console.error('Error fetching JSON:', error);
