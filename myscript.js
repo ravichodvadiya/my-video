@@ -88,12 +88,10 @@ function renderHomePage() {
   cardContainer.className = "card-container";
 
   // Check if data is available
-  console.log(data); // Make sure `data` is an array and is populated
   const totalCards = data.length;
 
   // Ensure the generateRandomAdPositions function is working
   const adPositions = generateRandomAdPositions(totalCards, Math.ceil(totalCards / 4));
-  console.log(adPositions); // Verify the ad positions are correctly generated
 
   data.forEach((card, index) => {
     // Create the card element
