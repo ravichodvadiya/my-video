@@ -102,7 +102,10 @@ function renderHomePage() {
   // Ensure the generateRandomAdPositions function is working
   const adPositions = generateRandomAdPositions(totalCards, Math.ceil(totalCards / 4));
 
-  data.forEach((card, index) => {
+  // Reverse the data array
+  const reversedData = [...data].reverse();
+
+  reversedData.forEach((card, index) => {
     // Create the card element
     const cardElement = document.createElement("div");
     cardElement.className = "card";
