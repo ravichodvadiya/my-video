@@ -21,7 +21,7 @@ fetch(jsonFilePath)
 function getData() {
     const params = new URLSearchParams(window.location.search);
     const name = params.get("id") || 0;
-
+    console.log("name ===>",name)
     const app = document.getElementById("singlepost");
     const card = data.find((card) => card.id === name);
 
