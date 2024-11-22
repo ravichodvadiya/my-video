@@ -18,11 +18,11 @@ fetch(jsonFilePath)
   })
   .then(res => {
     data = res;
-    // if (data.length > 0) {
-    //   navigateTo('home')
-    //   // const btn = document.getElementById('home');
-    //   // btn.click()
-    // }
+    if (data.length > 0) {
+      //navigateTo('home')
+      const btn = document.getElementById('home');
+      btn.click()
+    }
   })
   .catch(error => {
     console.error('Error fetching JSON:', error);
