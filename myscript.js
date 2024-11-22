@@ -18,11 +18,11 @@ fetch(jsonFilePath)
   })
   .then(res => {
     data = res;
-    // if (data.length > 0) {
-    //   navigateTo('home')
-    //   // const btn = document.getElementById('home');
-    //   // btn.click()
-    // }
+    if (data.length > 0) {
+      navigateTo('home')
+      // const btn = document.getElementById('home');
+      // btn.click()
+    }
   })
   .catch(error => {
     console.error('Error fetching JSON:', error);
@@ -76,6 +76,7 @@ function navigateTo(page, cardId = null) {
 
   if (page === "home") {
     clickDirectLink()
+    window.location.href = "index.html";
     renderHomePage();
   } else if (page === "details" && cardId) {
       clickDirectLink()
@@ -93,7 +94,6 @@ function clickDirectLink() {
 // Render Home page with dynamic cards
 // Render Home page with dynamic cards and random ad placement
 function renderHomePage() {
-  window.location.href = "index.html";
   const app = document.getElementById("app");
   const cardContainer = document.createElement("div");
   cardContainer.className = "card-container";
