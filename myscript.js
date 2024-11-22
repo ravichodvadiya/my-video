@@ -76,7 +76,7 @@ function navigateTo(page, cardId = null) {
 
   if (page === "home") {
     clickDirectLink()
-    window.location.href = "index.html";
+    //window.location.href = "index.html";
     renderHomePage();
   } else if (page === "details" && cardId) {
       clickDirectLink()
