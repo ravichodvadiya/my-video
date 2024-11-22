@@ -71,8 +71,8 @@ fetch(jsonFilePath)
 
 // Function to navigate between pages
 function navigateTo(page, cardId = null) {
-  const app = document.getElementById("app");
-  app.innerHTML = ""; // Clear existing content
+  // const app = document.getElementById("app");
+  // app.innerHTML = ""; // Clear existing content
 
   if (page === "home") {
     clickDirectLink()
