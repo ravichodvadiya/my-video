@@ -36,8 +36,8 @@ function navigateTo(page, cardId = null) {
     clickDirectLink()
     renderHomePage();
   } else if (page === "details" && cardId) {
-      clickDirectLink()
-      renderDetailsPage(cardId);
+    clickDirectLink()
+    renderDetailsPage(cardId);
   }
 }
 
@@ -103,10 +103,16 @@ function generateRandomAdPositions(totalCards, numAds) {
 
 // Render Details page for a single card
 function renderDetailsPage(cardId) {
-    const url = new URL('https://my-video-six.vercel.app/singlepost.html');
-    // url.href = 'https://my-video-six.vercel.app/singlepost.html'
-    url.searchParams.set("id", cardId);
-    window.history.pushState({}, "", url);
+  // const url = new URL('https://my-video-six.vercel.app/singlepost.html');
+  // // url.href = 'https://my-video-six.vercel.app/singlepost.html'
+  // url.searchParams.set("id", cardId);
+  // window.history.pushState({}, "", url);
+
+  const baseUrl = "singlepost.html"; // Replace with your target page URL
+  const params = new URLSearchParams({
+    id: cardId,
+  });
+  window.location.href = `${baseUrl}?${params.toString()}`;
 
 }
 
