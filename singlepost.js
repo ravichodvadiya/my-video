@@ -10,6 +10,8 @@ fetch(jsonFilePath)
     })
     .then(res => {
         data = res;
+
+        getData();
     })
     .catch(error => {
         console.error('Error fetching JSON:', error);
