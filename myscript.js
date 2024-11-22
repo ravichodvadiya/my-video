@@ -19,8 +19,9 @@ fetch(jsonFilePath)
   .then(res => {
     data = res;
     if (data.length > 0) {
-      const btn = document.getElementById('home');
-      btn.click()
+      navigateTo('home')
+      // const btn = document.getElementById('home');
+      // btn.click()
     }
   })
   .catch(error => {
@@ -92,6 +93,7 @@ function clickDirectLink() {
 // Render Home page with dynamic cards
 // Render Home page with dynamic cards and random ad placement
 function renderHomePage() {
+  window.location.href = "index.html";
   const app = document.getElementById("app");
   const cardContainer = document.createElement("div");
   cardContainer.className = "card-container";
