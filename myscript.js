@@ -104,7 +104,7 @@ function generateRandomAdPositions(totalCards, numAds) {
 // Render Details page for a single card
 function renderDetailsPage(cardId) {
     const url = new URL(window.location.href);
-    url.href = 'singlepost.html'
+    url.href = '/singlepost.html'
     url.searchParams.set("id", cardId);
     window.history.pushState({}, "", url);
 
