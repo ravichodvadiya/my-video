@@ -26,7 +26,7 @@ function getData() {
     console.log("data ===>",data)
     console.log("name ===>",name, typeof name)
     const app = document.getElementById("singlepost");
-    const card = data.find((card) => card.id === name);
+    const card = data.find((card) => card.id == name);
 
     if (card) {
         const cardElement = document.createElement("div");
