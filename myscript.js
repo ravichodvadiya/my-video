@@ -190,7 +190,9 @@ function generateRandomAdPositions(totalCards, numAds) {
 
 // Render Details page for a single card
 function renderDetailsPage(cardId) {
-  const app = document.getElementById("app");
+  window.location.href = "singlepost.html";
+
+  const app = document.getElementById("singlepost");
   const card = data.find((card) => card.id === cardId);
 
   if (card) {
