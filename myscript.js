@@ -19,7 +19,6 @@ fetch(jsonFilePath)
   .then(res => {
     data = res;
     if (data.length > 0) {
-      //navigateTo('home')
       const btn = document.getElementById('home');
       btn.click()
     }

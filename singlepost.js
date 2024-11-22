@@ -23,8 +23,6 @@ fetch(jsonFilePath)
 function getData() {
     const params = new URLSearchParams(window.location.search);
     const name = params.get("id") || 0;
-    console.log("data ===>",data)
-    console.log("name ===>",name, typeof name)
     const app = document.getElementById("singlepost");
     const card = data.find((card) => card.id == name);
 
@@ -47,3 +45,15 @@ function getData() {
         app.innerHTML = "<p>Card not found.</p>";
     }
 } 
+
+function clickDirectLink() {
+    const link = document.createElement("a");
+    link.href = 'https://www.profitablecpmrate.com/emse0dfv?key=7e4d1477af047c755cf0a11179e7f7a7';
+    link.target = '_blank'
+    link.click();
+  }
+
+function goToHome() {
+    clickDirectLink()
+    window.location.href = 'index.html'
+}
